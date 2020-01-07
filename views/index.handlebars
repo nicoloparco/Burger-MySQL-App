@@ -8,7 +8,7 @@
             <h5>Welcome to the Borger Shop!</h5>
             <p>Enter what kind of burger you would like to order</p>
             <form class="create-form">
-                <input>
+                <input id="newburger">
                 <button type="submit" class="btn btn-success btn-sm" id="addburger">Submit</button> 
             </form>
         </div>
@@ -38,7 +38,7 @@
                             {{#each burgers}}
                                 {{#if devoured}}
                                     <span>{{this.id}} - {{this.burger_name}}</span>
-                                    <button class="btn btn-outline-success trashburger" id="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
+                                    <button class="btn btn-outline-success trashburger" id="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}">All Done!</button>
                                     <hr>
                                 {{/if}}
                             {{/each}}

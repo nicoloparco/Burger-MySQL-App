@@ -3,7 +3,7 @@ const connection = require("./connection.js")
 function printQuestionMarks(num) {
     var arr = []
 
-    for (var i=0; i < num.length; i++) {
+    for (var i = 0; i < num; i++) {
         arr.push("?")
     }
     return arr.toString();
@@ -72,7 +72,22 @@ var orm = {
             }
             cb(result)
         });
+    },
+    deleteOne: function(table, condition, cb) {
+        var queryString = "DELETE FROM " + table
+
+        queryString += " WHERE "
+        queryString += condition
+
+        console.log(queryString)
+
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result)
+        });
     }
-}
+};
 
 module.exports = orm
