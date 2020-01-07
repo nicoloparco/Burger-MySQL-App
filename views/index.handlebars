@@ -7,8 +7,10 @@
             <hr class="my-4">
             <h5>Welcome to the Borger Shop!</h5>
             <p>Enter what kind of burger you would like to order</p>
-            <input id="orderInput">
-            <button class="btn btn-success btn-sm" id="submitBtn">Submit</button>
+            <form class="create-form">
+                <input>
+                <button type="submit" class="btn btn-success btn-sm" id="addburger">Submit</button> 
+            </form>
         </div>
 
         <div class="row justify-content-between">
@@ -20,7 +22,7 @@
                             {{#each burgers}}
                                 {{#unless devoured}}
                                     <span>{{this.id}} - {{this.burger_name}}</span>
-                                    <button class="btn btn-outline-success" id="devourBtn" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
+                                    <button class="btn btn-outline-success eatburger" id="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
                                     <hr>
                                 {{/unless}}
                             {{/each}}
@@ -36,7 +38,7 @@
                             {{#each burgers}}
                                 {{#if devoured}}
                                     <span>{{this.id}} - {{this.burger_name}}</span>
-                                    <button class="btn btn-outline-success" id="trashBtn" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
+                                    <button class="btn btn-outline-success trashburger" id="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
                                     <hr>
                                 {{/if}}
                             {{/each}}
@@ -44,14 +46,5 @@
                     </div>
                 </div>
             </div>
-           
-    
-    
-    
-    
-    
-    
-    
-    </div> 
-
+        </div> 
 </body>
