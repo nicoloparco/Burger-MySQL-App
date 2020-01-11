@@ -1,9 +1,9 @@
 const mysql = require("mysql")
 var connection = mysql.createConnection({
-    host: "localhost",
+    host: "@us-cdbr-iron-east-05.cleardb.net",
     port: 3306,
-    user: "root",
-    password: "docker",
+    user: "bff44ce58e9705",
+    password: "676e3259",
     database: "burgers_db"
 });
 
