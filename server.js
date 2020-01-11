@@ -19,5 +19,6 @@ app.use(routes)
 
 
 app.listen(PORT, function() {
-    console.log("Server listening on http://localhost/" + PORT)
+    console.log("Server listening on us-cdbr-iron-east-05.cleardb.net/" + PORT)
 });
+

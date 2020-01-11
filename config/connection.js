@@ -1,10 +1,10 @@
 const mysql = require("mysql")
 var connection = mysql.createConnection({
-    host: "@us-cdbr-iron-east-05.cleardb.net",
+    host: "us-cdbr-iron-east-05.cleardb.net",
     port: 3306,
     user: "bff44ce58e9705",
     password: "676e3259",
-    database: "burgers_db"
+    database: "heroku_4affa8582a960a4"
 });
 
 
@@ -18,4 +18,5 @@ connection.connect(function(err) {
 
 
 module.exports = connection;
+
 
