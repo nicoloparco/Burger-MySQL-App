@@ -21,7 +21,7 @@
                         <ul>
                             {{#each burgers}}
                                 {{#unless devoured}}
-                                    <span>{{this.id}} - {{this.burger_name}}</span>
+                                    <span>{{this.burger_name}}</span>
                                     <button class="btn btn-outline-success eatburger" id="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour</button>
                                     <hr>
                                 {{/unless}}
