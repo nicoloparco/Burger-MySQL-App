@@ -86,6 +86,7 @@ var orm = {
                 throw err;
             }
             cb(result)
+            location.reload();
         });
     }
 };
