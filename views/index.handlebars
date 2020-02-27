@@ -37,7 +37,7 @@
                          <ul>
                             {{#each burgers}}
                                 {{#if devoured}}
-                                    <span>{{this.id}} - {{this.burger_name}}</span>
+                                    <span>{{this.burger_name}}</span>
                                     <button class="btn btn-outline-success trashburger" id="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}">All Done!</button>
                                     <hr>
                                 {{/if}}
